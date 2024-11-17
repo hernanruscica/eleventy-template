@@ -1,8 +1,8 @@
 export default {
     name: "TestSite",
     description: "This is a web site template using Eleventy",
-   // baseUrl: "http://localhost:8080",
-    baseUrl: "https://impulsainternet.com/test",
+    baseUrl: "http://localhost:8080",
+    //baseUrl: "https://impulsainternet.com/test",
     sections: ["pages", "blog", "about", "contact"],
     socials: [
         {   
