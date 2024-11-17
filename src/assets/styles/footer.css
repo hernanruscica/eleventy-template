@@ -1,0 +1,124 @@
+
+/* Estilos Generales */
+.site-footer {
+    background-color: var(--color-accent);
+    color: var(--footer-color-text);
+    padding: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    letter-spacing: 0.1em;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  
+  .footer-container > div {
+    flex: 1 1 70px;
+  }
+
+  .footer-logo-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;    
+    gap: 0.5em;
+  }
+  
+  .footer-logo-section img {
+    width: 120px;
+    margin-bottom: 0.5rem;    
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 0.3rem 0;
+  }
+  
+  .footer-links a {
+    font-family: Tahoma, Verdana, sans-serif;
+    color: var(--footer-color-text);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .footer-links a:hover {
+    color: var(--color-text);
+  }
+  
+  .footer-socials a {
+    color: var(--footer-color-text);  
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    column-gap: 0.5em;
+  }
+
+  .footer-logo-img {
+    width: 28px;
+    height: auto;    
+  }
+  
+  .footer-socials a:hover {
+    color: var(--color-text);
+  }
+  
+  .footer-subscribe form {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .footer-subscribe input[type="email"] {
+    padding: 0.5rem;
+    flex: 1;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .footer-subscribe button {
+    padding: 0.5rem 1rem;
+    background-color: #f90;
+    border: none;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .footer-contact p {
+    margin: 0.42rem 0;
+    line-height: 1.1em;
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+  }
+  
+  
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--footer-color-text);
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  

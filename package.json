@@ -1,0 +1,18 @@
+{
+  "name": "eleventy-template",
+  "version": "0.9.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Cesar Hernan Ruscica",
+  "license": "MIT",
+  "description": "Template for a static Eleventy project.",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

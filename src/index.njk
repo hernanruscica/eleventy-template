@@ -1,0 +1,151 @@
+---
+title: Site index file
+layout: "base.njk"
+aos: "fade-up"
+aosDuration: 500
+aosOffset: 200
+anchorPlacement: "top-bottom"
+aosDelay: 100
+
+backgroundImage: "pexels-picjumbo-com-55570-196655.jpg"
+heroTitle: hero image title
+subtitle: "Default Subtitle"
+buttonLink: "#default-link"
+buttonText: "Learn More"
+cards: [
+    {title: "Title number #1",
+     description: "Description numer one",
+     image: "FIy3o0n-oI-222.png",
+     link: "services/title01"
+    },
+    {title: "Title number #2",
+     description: "Description numer two",
+     image: "pexels-picjumbo-com-55570-196655.jpg",
+     link: "services/title02"
+    }
+]
+benefitsCards: [
+      {icon: "eye-regular.svg",
+       title: "Atrae más Clientes Potenciales",
+       description: "Incrementa tu visibilidad y alcance a través de un sitio web optimizado y estrategias de marketing digital."
+      },
+      {icon: "verified-svgrepo-com.svg",
+      title: "Credibilidad y Confianza",
+      description: "Un sitio web profesional ayuda a construir confianza y autoridad en tu industria."
+      },
+      {icon: "earth-grid-with-24-hours.svg",
+      title: "Accesibilidad 24/7",
+      description: "Permite a los usuarios acceder a la información sobre tu negocio en cualquier momento y lugar."
+      }
+    ]
+---
+
+
+{% block hero %}
+{% include "hero.njk"%}
+{% endblock%}
+
+<p>This is a paragraph saying hello from index.md</p>
+
+
+<h2> next steps: </h2>
+<ul> 
+    <li><s>create the header as a component.</s></li>
+    <li><s>improved the base styles and copy the fonts to the project.</s></li>
+    <li>implement a hero image carrousel.</li>
+    <li><s>implement AOS library and make some examples.</s></li>
+</ul>
+
+<h2> dummy paragraph: </h2>
+<p> 
+    These are the next steps, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+    consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+    Cras velit magna.
+</p>
+
+<h2 data-aos= "flip-right" data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}> Benefits: </h2>
+
+{% block benefits %}
+    {% include "benefits-cards.njk" %}
+{% endblock%}
+
+<h2> dummy paragraph: </h2>
+<p> 
+    These are the next steps, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+    consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+    Cras velit magna.
+</p>
+
+<section class="services" >
+    <h2 data-aos= "flip-right" data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}>
+        Our services
+    </h2>
+    {% block cards %}
+    {% include "cards.njk"%}
+    {% endblock%}
+</section>
+
+<div>
+    <h2> next steps: </h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+<div data-aos= {{ aos }} data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}>
+    <h2> next steps: </h2>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+
+<section class="services"  data-aos= {{ aos }} data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}>
+  <h2>Our services</h2>
+    {% block cards02 %}
+    {% include "cards.njk"%}
+    {% endblock%}
+</section>
+
+<div data-aos= {{ aos }} data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}>
+    <h2> next steps: </h2>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+
+{# <div data-aos= {{ aos }} data-aos-duration= {{ aosDuration }} data-aos-offset= {{ aosOffset }} 
+    data-aos-delay= {{ aosDelay }} data-aos-anchor-placement= {{ anchorPlacement }} >  #}
+<div data-aos= {{ aos }} data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}>
+    <h2> next steps: </h2>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+{# <div data-aos= {{ aos }} data-aos-duration= {{ aosDuration }} data-aosOffset= {{ aosOffset }} 
+    data-aos-delay= {{ aosDelay }} data-aos-anchor-placement= {{ anchorPlacement }} >  #}
+<div data-aos= {{ aos }} data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}>
+    <h2> next steps: </h2>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+

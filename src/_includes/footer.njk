@@ -1,0 +1,72 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Sección de Logo y Descripción -->
+    <div class="footer-logo-section">
+      <img src="{{ site.baseUrl }}/assets/images/sitelogo.png" alt="Logo del Sitio" class="footer-logo">
+      <p>{{ site.client.description }}</p>
+    </div>
+    
+    <!-- Enlaces de Navegación -->
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="{{ site.baseUrl }}">Home</a></li>
+        {% for section in site.sections %}  
+        <li>
+            <a href="{{ site.baseUrl }}/{{ section }}">{{ section }}</a>
+        </li>  
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <!-- Enlaces Útiles 
+    <div class="footer-links">
+      <h4>Enlaces Útiles</h4>
+      <ul>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+    </div>
+    -->
+
+    <!-- Redes Sociales -->
+    <div class="footer-socials">
+      <h4>Social media</h4>      
+      {% for social in site.socials %}
+        <a href="{{ social.url }}" target="_blank">
+            <img src="{{ site.baseUrl }}/assets/icons/socials/{{ social.icon }}-light.svg" alt="{{ social.name }} logo svg" class="footer-logo-img">
+            <span> {{ social.text }}</span>
+        </a>
+      {% endfor %}
+    </div>
+    
+    <!-- Suscripción al Boletín 
+    <div class="footer-subscribe">
+      <h4>Suscribe</h4>
+      <p>Recive the latest news and discount directly to your mail !</p>
+      <form action="#" method="POST">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Suscribe</button>
+      </form>
+    </div>
+-->
+    <!-- Información de Contacto -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><img src="{{ site.baseUrl }}/assets/icons/phone-solid.svg" alt="telephone icon svg" class="footer-logo-img"> {{ site.client.telephone }}</p>
+      <p><img src="{{ site.baseUrl }}/assets/icons/envelope-solid.svg" alt="telephone icon svg" class="footer-logo-img"> {{ site.client.email }} </p>
+      <p><img src="{{ site.baseUrl }}/assets/icons/house-solid.svg" alt="telephone icon svg" class="footer-logo-img"> {{ site.client.address }} </p>
+    </div>
+    
+  </div>
+  
+  <!-- Derechos de Autor -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Tu Sitio. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+

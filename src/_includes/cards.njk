@@ -1,0 +1,13 @@
+
+<div class="cards-container">
+    {% for card in cards %}
+    <div class="card"  data-aos= {{ aos }} data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}>
+        <img src="{{ site.baseUrl }}/assets/images/{{ card.image }}" alt="{{ card.title }}" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">{{ card.title }}</h3>
+            <p class="card-description">{{ card.description }}</p>
+            <a href="{{ site.baseUrl }}{{ card.link }}" class="card-button">Leer más</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

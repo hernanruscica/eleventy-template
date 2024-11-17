@@ -1,0 +1,385 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TestSite - Site index file</title>
+        
+            <meta name="description" content="This is a web site template using Eleventy">                      
+        
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">  
+        <link rel="stylesheet" href="https://impulsainternet.com/test/assets/styles/base.css">
+        <link rel="stylesheet" href="https://impulsainternet.com/test/assets/styles/header.css">
+        <link rel="stylesheet" href="https://impulsainternet.com/test/assets/styles/footer.css">        
+             
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://impulsainternet.com/test/assets/styles/heroimage.css">  
+        <link rel="stylesheet" href="https://impulsainternet.com/test/assets/styles/cards.css">  
+        <link rel="stylesheet" href="https://impulsainternet.com/test/assets/styles/benefitscards.css">  
+    </head>
+    <body class="light-mode">      
+        <header  id="header" >
+    <div class="container">
+      
+      <nav class="site-nav">
+        <div class="logo">
+            <a href="https://impulsainternet.com/test">
+            <img src="https://impulsainternet.com/test/assets/images/sitelogo.png" alt="Logo del sitio" />
+            </a>
+        </div>
+        <ul class="nav-links">
+          <button class="close-menu" aria-label="Cerrar menú" onclick="toggleMenu()">
+            ✕
+          </button>
+          <li><a href="https://impulsainternet.com/test">Home</a></li>
+             
+            <li>
+                <a href="https://impulsainternet.com/test/pages">pages</a>
+            </li>  
+              
+            <li>
+                <a href="https://impulsainternet.com/test/blog">blog</a>
+            </li>  
+              
+            <li>
+                <a href="https://impulsainternet.com/test/about">about</a>
+            </li>  
+              
+            <li>
+                <a href="https://impulsainternet.com/test/contact">contact</a>
+            </li>  
+            
+        </ul>
+
+        <!-- Botón para menú en móvil -->
+        <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">
+          ☰
+        </button>
+      </nav>
+    </div>
+  </header>
+                
+        <main  id="main" >
+            <article class="container article">
+                
+                
+
+
+<div class="hero" style="background-image: url('https://impulsainternet.com/test/assets/images/pexels-picjumbo-com-55570-196655.jpg');">
+  <div class="hero-content">
+    <h1 class="hero-title">hero image title</h1>
+    <p class="hero-subtitle">Default Subtitle</p>
+    <a href="#default-link" class="hero-button">Learn More</a>
+  </div>
+</div>
+
+
+
+<p>This is a paragraph saying hello from index.md</p>
+
+
+<h2> next steps: </h2>
+<ul> 
+    <li><s>create the header as a component.</s></li>
+    <li><s>improved the base styles and copy the fonts to the project.</s></li>
+    <li>implement a hero image carrousel.</li>
+    <li><s>implement AOS library and make some examples.</s></li>
+</ul>
+
+<h2> dummy paragraph: </h2>
+<p> 
+    These are the next steps, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+    consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+    Cras velit magna.
+</p>
+
+<h2 data-aos= "flip-right" data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom> Benefits: </h2>
+
+
+    
+<div class="benefits-container">
+    
+    <div class="benefit-card" data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+        <div class="icon-container">
+            <img src="https://impulsainternet.com/test/assets/icons/eye-regular.svg" alt="Atrae más Clientes Potenciales icon" class="benefit-icon">
+        </div>
+        <div class="benefit-content">
+            <h3 class="benefit-title">Atrae más Clientes Potenciales</h3>
+            <p class="benefit-description">Incrementa tu visibilidad y alcance a través de un sitio web optimizado y estrategias de marketing digital.</p>
+        </div>
+    </div>
+    
+    <div class="benefit-card" data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+        <div class="icon-container">
+            <img src="https://impulsainternet.com/test/assets/icons/verified-svgrepo-com.svg" alt="Credibilidad y Confianza icon" class="benefit-icon">
+        </div>
+        <div class="benefit-content">
+            <h3 class="benefit-title">Credibilidad y Confianza</h3>
+            <p class="benefit-description">Un sitio web profesional ayuda a construir confianza y autoridad en tu industria.</p>
+        </div>
+    </div>
+    
+    <div class="benefit-card" data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+        <div class="icon-container">
+            <img src="https://impulsainternet.com/test/assets/icons/earth-grid-with-24-hours.svg" alt="Accesibilidad 24/7 icon" class="benefit-icon">
+        </div>
+        <div class="benefit-content">
+            <h3 class="benefit-title">Accesibilidad 24/7</h3>
+            <p class="benefit-description">Permite a los usuarios acceder a la información sobre tu negocio en cualquier momento y lugar.</p>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<h2> dummy paragraph: </h2>
+<p> 
+    These are the next steps, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+    consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+    Cras velit magna.
+</p>
+
+<section class="services" >
+    <h2 data-aos= "flip-right" data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+        Our services
+    </h2>
+    
+    
+<div class="cards-container">
+    
+    <div class="card"  data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+        <img src="https://impulsainternet.com/test/assets/images/FIy3o0n-oI-222.png" alt="Title number #1" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">Title number #1</h3>
+            <p class="card-description">Description numer one</p>
+            <a href="https://impulsainternet.com/testservices/title01" class="card-button">Leer más</a>
+        </div>
+    </div>
+    
+    <div class="card"  data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+        <img src="https://impulsainternet.com/test/assets/images/pexels-picjumbo-com-55570-196655.jpg" alt="Title number #2" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">Title number #2</h3>
+            <p class="card-description">Description numer two</p>
+            <a href="https://impulsainternet.com/testservices/title02" class="card-button">Leer más</a>
+        </div>
+    </div>
+    
+</div>
+
+    
+</section>
+
+<div>
+    <h2> next steps: </h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+<div data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+    <h2> next steps: </h2>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+
+<section class="services"  data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+  <h2>Our services</h2>
+    
+    
+<div class="cards-container">
+    
+    <div class="card"  data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+        <img src="https://impulsainternet.com/test/assets/images/FIy3o0n-oI-222.png" alt="Title number #1" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">Title number #1</h3>
+            <p class="card-description">Description numer one</p>
+            <a href="https://impulsainternet.com/testservices/title01" class="card-button">Leer más</a>
+        </div>
+    </div>
+    
+    <div class="card"  data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+        <img src="https://impulsainternet.com/test/assets/images/pexels-picjumbo-com-55570-196655.jpg" alt="Title number #2" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">Title number #2</h3>
+            <p class="card-description">Description numer two</p>
+            <a href="https://impulsainternet.com/testservices/title02" class="card-button">Leer más</a>
+        </div>
+    </div>
+    
+</div>
+
+    
+</section>
+
+<div data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+    <h2> next steps: </h2>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+
+
+<div data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+    <h2> next steps: </h2>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+
+<div data-aos= fade-up data-aos-offset= 200 data-aos-duration= 500 data-aos-anchor-placement= top-bottom>
+    <h2> next steps: </h2>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula nunc, rutrum ultricies viverra in, porttitor eget purus. Aenean sit amet risus aliquet, 
+        consectetur tellus nec, efficitur dolor. Fusce vehicula fringilla enim at pulvinar. Fusce at consequat massa. Etiam placerat orci tortor, maximus tincidunt dolor euismod at. 
+        Cras velit magna.
+    </p>
+</div>
+
+
+            </article>
+        </main>
+
+        <footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Sección de Logo y Descripción -->
+    <div class="footer-logo-section">
+      <img src="https://impulsainternet.com/test/assets/images/sitelogo.png" alt="Logo del Sitio" class="footer-logo">
+      <p>Bussiness client description, products and services.</p>
+    </div>
+    
+    <!-- Enlaces de Navegación -->
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="https://impulsainternet.com/test">Home</a></li>
+          
+        <li>
+            <a href="https://impulsainternet.com/test/pages">pages</a>
+        </li>  
+          
+        <li>
+            <a href="https://impulsainternet.com/test/blog">blog</a>
+        </li>  
+          
+        <li>
+            <a href="https://impulsainternet.com/test/about">about</a>
+        </li>  
+          
+        <li>
+            <a href="https://impulsainternet.com/test/contact">contact</a>
+        </li>  
+        
+      </ul>
+    </div>
+    
+    <!-- Enlaces Útiles 
+    <div class="footer-links">
+      <h4>Enlaces Útiles</h4>
+      <ul>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+    </div>
+    -->
+
+    <!-- Redes Sociales -->
+    <div class="footer-socials">
+      <h4>Social media</h4>      
+      
+        <a href="https://www.facebook.com/pagina" target="_blank">
+            <img src="https://impulsainternet.com/test/assets/icons/socials/facebook-brands-solid-light.svg" alt="facebook logo svg" class="footer-logo-img">
+            <span> Our products page</span>
+        </a>
+      
+        <a href="https://www.instagram.com/pagina" target="_blank">
+            <img src="https://impulsainternet.com/test/assets/icons/socials/instagram-brands-solid-light.svg" alt="instagram logo svg" class="footer-logo-img">
+            <span> Follow us on instagram</span>
+        </a>
+      
+        <a href="https://www.x.com/pagina" target="_blank">
+            <img src="https://impulsainternet.com/test/assets/icons/socials/x-twitter-brands-solid-light.svg" alt="X logo svg" class="footer-logo-img">
+            <span> Follow us on X (ex Twitter)</span>
+        </a>
+      
+    </div>
+    
+    <!-- Suscripción al Boletín 
+    <div class="footer-subscribe">
+      <h4>Suscribe</h4>
+      <p>Recive the latest news and discount directly to your mail !</p>
+      <form action="#" method="POST">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Suscribe</button>
+      </form>
+    </div>
+-->
+    <!-- Información de Contacto -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><img src="https://impulsainternet.com/test/assets/icons/phone-solid.svg" alt="telephone icon svg" class="footer-logo-img"> +123 456 7890</p>
+      <p><img src="https://impulsainternet.com/test/assets/icons/envelope-solid.svg" alt="telephone icon svg" class="footer-logo-img"> contact@clientsite.com </p>
+      <p><img src="https://impulsainternet.com/test/assets/icons/house-solid.svg" alt="telephone icon svg" class="footer-logo-img"> fake street 1234, fake city </p>
+    </div>
+    
+  </div>
+  
+  <!-- Derechos de Autor -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Tu Sitio. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+        
+        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('nav-active');            
+            }       
+            // Selecciona la cabecera
+            const header = document.getElementById("header");
+
+            // Agrega un evento de scroll
+            window.addEventListener("scroll", () => {
+            if (window.scrollY > 40) {
+                // Si se ha desplazado más de 50px, agrega la clase
+                header.classList.add("scrolled");
+            } else {
+                // Si no, quita la clase
+                header.classList.remove("scrolled");
+            }
+            });                                    
+        </script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+ </html> 
+

@@ -1,0 +1,14 @@
+
+<div class="benefits-container">
+    {% for benefitsCard in benefitsCards %}
+    <div class="benefit-card" data-aos= {{ aos }} data-aos-offset= {{ aosOffset }} data-aos-duration= {{ aosDuration }} data-aos-anchor-placement= {{ anchorPlacement }}>
+        <div class="icon-container">
+            <img src="{{ site.baseUrl }}/assets/icons/{{ benefitsCard.icon }}" alt="{{ benefitsCard.title }} icon" class="benefit-icon">
+        </div>
+        <div class="benefit-content">
+            <h3 class="benefit-title">{{ benefitsCard.title }}</h3>
+            <p class="benefit-description">{{ benefitsCard.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

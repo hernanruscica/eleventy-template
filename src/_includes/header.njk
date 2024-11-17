@@ -1,0 +1,28 @@
+<header  id="header" >
+    <div class="container">
+      
+      <nav class="site-nav">
+        <div class="logo">
+            <a href="{{ site.baseUrl }}">
+            <img src="{{ site.baseUrl }}/assets/images/sitelogo.png" alt="Logo del sitio" />
+            </a>
+        </div>
+        <ul class="nav-links">
+          <button class="close-menu" aria-label="Cerrar menú" onclick="toggleMenu()">
+            ✕
+          </button>
+          <li><a href="{{ site.baseUrl }}">Home</a></li>
+           {% for section in site.sections %}  
+            <li>
+                <a href="{{ site.baseUrl }}/{{ section }}">{{ section }}</a>
+            </li>  
+            {% endfor %}
+        </ul>
+
+        <!-- Botón para menú en móvil -->
+        <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">
+          ☰
+        </button>
+      </nav>
+    </div>
+  </header>
