@@ -1,0 +1,17 @@
+<!-- Hero Start -->
+<!-- Use heroImage, title, parentUrl, parentPage, currentPage variables when including this file -->
+
+<div class="container-fluid bg-primary pt-5 pb-2 bg-header"
+    style="background: linear-gradient(rgba(9, 30, 62, .5), rgba(9, 30, 62, .8)), url({{ site.baseUrl }}/assets/images/{{ heroImage or 'about.jpg' }}) center center no-repeat; background-size: cover;">
+    <div class="row py-3 pt-5 ">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="pt-sm-1 pt-lg-5" style="max-width: 900px;">
+                <h1 class="display-3 text-white mb-md-4 animated zoomIn">{{ site.hero.title }}</h1>
+                <h5 class="text-white  mb-3 animated slideInDown">{{ site.hero.subtitle }}</h5>
+                <a href="#presupuesto" class="btn btn-primary py-md-3 px-md-5 me-3 mb-3 animated slideInLeft">Presupuesto gratis</a>
+                <a href="/contacto" class="btn btn-outline-light py-md-3 px-md-5 mb-3 animated slideInRight">Contactenos</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->

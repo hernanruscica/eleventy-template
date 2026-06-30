@@ -1,0 +1,25 @@
+<div class="col-lg-4 wow slideInUp" data-wow-delay="{{ plan.delay }}">
+    <div class="bg-light rounded">
+        <div class="border-bottom py-4 px-5 mb-4">
+            <h4 class="text-primary mb-1">{{ plan.name }}</h4>
+            <small class="text-uppercase">{{ plan.description }}</small>
+        </div>
+        <div class="p-5 pt-0">
+            <h1 class="display-5 mb-3">
+                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{ plan.price }}<small
+                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ {{ plan.period }}</small>
+            </h1>
+            {% for feature in plan.features %}
+            <div class="d-flex justify-content-between mb-3">
+                <span>{{ feature.name }}</span>
+                {% if feature.included %}
+                <i class="fa fa-check text-primary pt-1"></i>
+                {% else %}
+                <i class="fa fa-times text-danger pt-1"></i>
+                {% endif %}
+            </div>
+            {% endfor %}
+            <a href="" class="btn btn-primary py-2 px-4 mt-4">{{ plan.buttonText }}</a>
+        </div>
+    </div>
+</div>

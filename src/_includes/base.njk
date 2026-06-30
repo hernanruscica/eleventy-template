@@ -1,63 +1,112 @@
- <!DOCTYPE html>
- <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ site.name }} - {{ title }}</title>
-        {% if description %}
-            <meta name="description" content="{{ description }}">                      
-        {% else %}
-            <meta name="description" content="{{ site.description }}">                      
-        {% endif %}
+<!DOCTYPE html>
+<html lang="es">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseURL }}/assets/icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseURL }}/assets/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseURL }}/assets/icons/favicon-16x16.png">  
-        <link rel="stylesheet" href="{{ site.baseUrl }}/assets/styles/base.css">
-        <link rel="stylesheet" href="{{ site.baseUrl }}/assets/styles/header.css">
-        <link rel="stylesheet" href="{{ site.baseUrl }}/assets/styles/footer.css">        
-        {% if stylesFileName %}  
-            <link rel="stylesheet" href="{{ site.baseUrl }}/assets/styles/{{ stylesFileName }}">   
-        {% endif %}     
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="{{ site.baseUrl }}/assets/styles/heroimage.css">  
-        <link rel="stylesheet" href="{{ site.baseUrl }}/assets/styles/cards.css">  
-        <link rel="stylesheet" href="{{ site.baseUrl }}/assets/styles/benefitscards.css">  
-    </head>
-    <body class="light-mode">      
-        {% include "header.njk" %}
-                
-        <main  id="main" >
-            <article class="container article">
-                {# <header> <h1 >{{ title }}</h1> </header>                 #}
-                {{ content | safe }}
-            </article>
-        </main>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RNL860GJT"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2RNL860GJT');
+    </script>
 
-        {% include "footer.njk" %}        
-        
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('nav-active');            
-            }       
-            // Selecciona la cabecera
-            const header = document.getElementById("header");
+    <meta charset="utf-8">
+    <title>{{ site.name }} - {{ title }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    {% if description %}
+        <meta name="description" content="{{ description }}">                      
+    {% else %}
+        <meta name="description" content="{{ site.description }}">                      
+    {% endif %}
 
-            // Agrega un evento de scroll
-            window.addEventListener("scroll", () => {
-            if (window.scrollY > 40) {
-                // Si se ha desplazado más de 50px, agrega la clase
-                header.classList.add("scrolled");
-            } else {
-                // Si no, quita la clase
-                header.classList.remove("scrolled");
-            }
-            });                                    
-        </script>
-        <script>
-            AOS.init();
-        </script>
-    </body>
- </html> 
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="copyright" content="{{ site.name }}" />
 
+    <!-- SEO -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Media -->
+    <meta property="og:title" content="{{ title }} - {{ site.name }}">
+    <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:image" content="{{ site.baseUrl }}/assets/images/impulsalogo-square.png">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ site.twitterHandle }}">
+    <meta name="twitter:title" content="{{ title }} - {{ site.name }}">
+    <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{ site.baseUrl }}/assets/images/impulsalogo-square.png">
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ site.baseUrl }}/assets/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="{{ site.baseUrl }}/assets/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="{{ site.baseUrl }}/assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="{{ site.baseUrl }}/site.webmanifest">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ site.baseUrl }}/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="{{ site.baseUrl }}/lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ site.baseUrl }}/assets/styles/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ site.baseUrl }}/assets/styles/style.css?v={{ site.buildTime | date('U') }}" rel="stylesheet">
+    <link href="{{ site.baseUrl }}/assets/styles/timeline.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    {% include "spinner.njk" %}
+
+    {% include "topbar.njk" %}
+
+    {% include "navbar.njk" %}    
+    
+        {{ content | safe }}
+
+    {% include "footer.njk" %}
+
+
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/{{ site.client.whatsappPhone }}?text=hola,%20quiero%20consultarte%20sobre%20tus%20servicios" 
+        class="btn btn-lg btn-success rounded-circle" 
+        style="position: fixed; bottom: 110px; right: 40px; z-index: 99; background-color: #25D366; border: none; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); transition: background-color 0.3s;">
+            <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ site.baseUrl }}/lib/wow/wow.min.js"></script>
+    <script src="{{ site.baseUrl }}/lib/easing/easing.min.js"></script>
+    <script src="{{ site.baseUrl }}/lib/waypoints/waypoints.min.js"></script>
+    <script src="{{ site.baseUrl }}/lib/counterup/counterup.min.js"></script>
+    <script src="{{ site.baseUrl }}/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ site.baseUrl }}/assets/scripts/main.js"></script>
+    <script src="{{ site.baseUrl }}/assets/scripts/form.js"></script>
+</body>
+
+</html>

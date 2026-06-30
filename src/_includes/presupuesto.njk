@@ -1,0 +1,64 @@
+<!-- presupuesto Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" id="presupuesto">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <div class="position-relative pb-3 mb-5">
+                    <h5 class="fw-bold text-primary text-uppercase">Solicite un presupuesto</h5>
+                    <h1 class="mb-0">No dude en presentarnos su proyecto o lo que necesita hacer</h1>
+                </div>
+                <div class="row gx-3">
+                    <div class="col-sm-6 " data-wow-delay="0.2s">
+                        <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Respondemos en menos de 24Hs.</h5>
+                    </div>
+                    <div class="col-sm-6 " data-wow-delay="0.4s">
+                        <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Soporte por Whatsapp</h5>
+                    </div>
+                </div>
+                <p class="mb-4">
+                    Si tiene un proyecto en mente, un sitio web que necesita actualizar o una idea que quiere llevar a cabo, ¡estamos aquí para ayudarle! Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible para discutir los detalles y ofrecerle un presupuesto personalizado.
+                </p>
+                <div class="d-flex align-items-center mt-2 " data-wow-delay="0.6s">
+                    <a href="tel:{{ site.client.telephone }}" class="d-flex align-items-center text-decoration-none">
+                        <div class="btn-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="mb-2 text-dark">Llámanos para cualquier consulta</h5>
+                            <h4 class="text-primary mb-0">{{ site.client.telephone }}</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="bg-light rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-xl-12">
+                                <input type="text" class="form-control  border-0" placeholder="Su nombre" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control  border-0" placeholder="Su correo electronico" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select  border-0" style="height: 55px;">
+                                    <option selected>Seleccione un servicio</option>                                    
+                                    {% for service in services.list %}
+                                    <option value="{{ service.title }}">{{ service.title }}</option>
+                                    {% endfor %}                                   
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control  border-0" rows="3" placeholder="Mensaje"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Pida su presupuesto</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- presupuesto End -->

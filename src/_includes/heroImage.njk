@@ -1,0 +1,16 @@
+<!-- Hero Start -->
+<!-- Use heroImage, title, parentUrl, parentPage, currentPage variables when including this file -->
+
+<div class="container-fluid bg-primary pt-4 pb-1 bg-header" 
+    style="margin-bottom: 10px; background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url({{ site.baseUrl }}/assets/images/{{ heroImage or 'about.jpg' }}) center center no-repeat; background-size: cover;">
+    <div class="row pt-5 pb-1 ">
+        <div class="col-12 col-lg-6 p-lg-5 mt-2 ps-lg-5 text-center text-lg-start">
+            <h1 class="display-5 text-white animated zoomIn">{{ title or "No title" }}</h1>
+            <p class="mb-4 text-white lh-lg" > {{ subtitle or "impulsa internet" }}</p>
+            {% if ctaUrl and ctaText %}
+            <a href="{{ ctaUrl }}" class="btn btn-primary py-3 px-5 animated slideInLeft">{{ ctaText }}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Hero End -->

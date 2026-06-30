@@ -1,0 +1,77 @@
+<!-- Contact Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class=" text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Contactanos</h5>
+                <h1 class="mb-0">Si tienes alguna consulta, no dudes en contactarnos</h1>
+            </div>
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <a href="tel:{{ site.client.telephone }}" class="text-decoration-none">
+                        <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone-alt fa-fw text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h4 class="mb-2">Llamenos</h4>
+                                <h5 class="text-primary mb-0 text-break">{{ site.client.telephone }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="mailto:{{ site.client.email }}" class="text-decoration-none">
+                        <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                <i class="fa fa-envelope-open fa-fw text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h4 class="mb-2">Envienos un Email</h4>
+                                <h5 class="text-primary mb-0 text-break">{{ site.client.email }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="https://api.whatsapp.com/send?phone={{ site.client.whatsappPhone }}" class="text-decoration-none" target="_blank">
+                        <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.8s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                <i class="fab fa-whatsapp fa-fw text-white fs-3"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h4 class="mb-2">Mensaje por WhatsApp</h4>
+                                <h5 class="text-primary mb-0">{{ site.client.telephone }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <form action="https://formspree.io/f/xandqwkr" method="post" id="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control border-0 bg-light px-4" placeholder="Tu Nombre" style="height: 55px;">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email"  class="form-control border-0 bg-light px-4" placeholder="Tu Email" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <input type="text" name="subject"  class="form-control border-0 bg-light px-4" placeholder="Asunto" style="height: 55px;">
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Mensaje"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d64248.55924690033!2d-58.675276661999405!3d-34.69200333927271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1755129291037!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
