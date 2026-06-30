@@ -15,4 +15,4 @@ Template for a static Eleventy project.
 
 ## Author
  
-Cesar Hernan Ruscica [Website](https://impulsainternet.com/ruscica).
+Cesar Hernan Ruscica [Website](https://ruscica.com.ar).
