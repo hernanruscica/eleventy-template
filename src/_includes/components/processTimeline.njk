@@ -1,0 +1,28 @@
+<div class="container-fluid py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <div class="">
+                    <h2 class="display-6 mb-4">Nuestro Proceso de Trabajo</h2>
+                    <p>Trabajamos de forma colaborativa y transparente para asegurar que el resultado final supere tus expectativas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <div class="timeline-steps">
+                    {% for step in processSteps %}
+                    <div class="timeline-step" data-aos="fade-up" data-aos-delay="{{ step.delay }}">
+                        <div class="timeline-content">
+                            <div class="inner-circle"></div>
+                            <p class="h6 mt-3 mb-1">{{ step.number }}</p>
+                            <p class="h6 mb-2">{{ step.title }}</p>
+                            <p class="text-muted mb-0 mb-lg-0">{{ step.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

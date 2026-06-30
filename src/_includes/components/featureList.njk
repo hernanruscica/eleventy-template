@@ -1,0 +1,17 @@
+<div class="row justify-content-center mt-5">
+  {% for feature in webDevFeatures %}
+  <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ feature.delay }}">
+    <div class="mb-5">
+        <div class="d-flex align-items-center mb-3">
+            <div class="d-inline-flex flex-shrink-0 align-items-center justify-content-center bg-white rounded-circle me-4" style="width: 65px; height: 65px;">
+                <i class="fa {{ feature.icon }} text-primary fs-4"></i>
+            </div>
+            <h4 class="mb-0">{{ feature.title }}</h4>
+        </div>
+        <div>
+            <p class="mb-0 lh-lg">{{ feature.description }}</p>
+        </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

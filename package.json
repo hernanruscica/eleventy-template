@@ -1,5 +1,5 @@
 {
-  "name": "eleventy-template",
+  "name": "impulsa_internet",
   "version": "0.9.0",
   "main": "index.js",
   "scripts": {
@@ -7,11 +7,12 @@
     "build": "eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "keywords": [],
   "author": "Cesar Hernan Ruscica",
   "license": "MIT",
-  "description": "Template for a static Eleventy project.",
-  "type": "module",
+  "description": "Impulsa internet website.",
+  
   "dependencies": {
     "@11ty/eleventy": "^3.0.0"
   }
