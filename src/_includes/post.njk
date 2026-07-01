@@ -1,0 +1,42 @@
+---
+layout: base.njk
+---
+
+{% include "heroImage.njk" %}
+
+<!-- Blog Detail Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <div class="mb-5">
+                    <img class="img-fluid w-100 rounded mb-5" src="{{ site.baseUrl }}/assets/images/{{ heroImage }}" alt="{{ title }}">
+                    <h1 class="mb-4">{{ title }}</h1>
+                    {{ content | safe }}
+                </div>
+
+                {% set comments = [
+                    { author: "Juan Pérez", authorUrl: "#", date: "15 Ene 2025", text: "Excelente artículo, muy informativo. Me ayudó a entender mejor los costos.", nested: false },
+                    { author: "María García", authorUrl: "#", date: "16 Ene 2025", text: "Gracias por la guía. ¿Podrías hablar más sobre hosting?", nested: false },
+                    { author: "Admin", authorUrl: "#", date: "17 Ene 2025", text: "Gracias María, pronto tendremos un artículo sobre hosting.", nested: true }
+                ] %}
+                {% set commentTitle = comments.length + " Comentarios" %}
+                {% include "commentSection.njk" %}
+            </div>
+
+            {% set showSearch = true %}
+            {% set categories = posts.categories %}
+            {% set recentPostsTitle = "Posts Recientes" %}
+            {% set recentPosts = posts.all %}
+            {% set sidebarImage = site.baseUrl ~ posts.sidebar.image %}
+            {% set tagsTitle = "Nube de Tags" %}
+            {% set tags = posts.tags %}
+            {% set plainTextTitle = posts.sidebar.plainTextTitle %}
+            {% set plainText = posts.sidebar.plainText %}
+            {% set plainTextCtaUrl = posts.sidebar.plainTextCtaUrl %}
+            {% set plainTextCtaText = posts.sidebar.plainTextCtaText %}
+            {% include "sidebar.njk" %}
+        </div>
+    </div>
+</div>
+<!-- Blog Detail End -->

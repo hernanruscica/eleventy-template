@@ -11,7 +11,7 @@ export default {
     },
     baseUrl: "http://localhost:8080",
      //baseUrl: "https://impulsainternet.com",
-    sections: [{name: "Inicio", url: "/"}, {name: "Servicios", url: "/servicios"}, {name: "Contacto", url: "/contacto"}],
+    sections: [{name: "Inicio", url: "/"}, {name: "Servicios", url: "/servicios"}, {name: "Blog", url: "/blog"}, {name: "Contacto", url: "/contacto"}],
     socials: [
         // {   
         //     name: "twitter",         

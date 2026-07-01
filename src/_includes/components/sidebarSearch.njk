@@ -1,0 +1,6 @@
+<form id="blog-search-form" action="{{ site.baseUrl }}/blog/" method="GET">
+    <div class="input-group">
+        <input type="text" id="blog-search-input" name="q" class="form-control p-3" placeholder="{{ placeholder or 'Buscar...' }}" value="{{ searchQuery or '' }}">
+        <button type="submit" class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+    </div>
+</form>

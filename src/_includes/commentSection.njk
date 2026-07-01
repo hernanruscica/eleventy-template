@@ -1,0 +1,22 @@
+<!-- Comment List Start -->
+<div class="mb-5">
+    {% set sectionTitle = commentTitle or "Comentarios" %}
+    {% include "components/sectionTitle.njk" %}
+    {% for comment in comments %}
+    {% set author = comment.author %}
+    {% set authorUrl = comment.authorUrl %}
+    {% set date = comment.date %}
+    {% set text = comment.text %}
+    {% set nested = comment.nested %}
+    {% include "components/commentItem.njk" %}
+    {% endfor %}
+</div>
+<!-- Comment List End -->
+
+<!-- Comment Form Start -->
+<div class="bg-light rounded p-5">
+    {% set sectionTitle = formTitle or "Deja un Comentario" %}
+    {% include "components/sectionTitle.njk" %}
+    {% include "components/commentForm.njk" %}
+</div>
+<!-- Comment Form End -->

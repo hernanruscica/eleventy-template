@@ -1,0 +1,8 @@
+<div class="d-flex {{ 'ms-5' if nested }} mb-4">
+    <img src="{{ site.baseUrl }}/assets/images/user.jpg" class="img-fluid rounded" style="width: 45px; height: 45px;">
+    <div class="ps-3">
+        <h6><a href="{{ authorUrl or '#' }}">{{ author }}</a> <small><i>{{ date }}</i></small></h6>
+        <p>{{ text }}</p>
+        <button class="btn btn-sm btn-light">Reply</button>
+    </div>
+</div>

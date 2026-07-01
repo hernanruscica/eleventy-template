@@ -18,6 +18,14 @@ export default async function (eleventyconfig) {
     eleventyconfig.addWatchTarget("./src/assets/styles");
     eleventyconfig.addWatchTarget("./src/assets/fonts");
 
+    eleventyconfig.addCollection("blog", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("src/blog/posts/*.md");
+    });
+
+    eleventyconfig.addFilter("json", function (value) {
+        return JSON.stringify(value);
+    });
+
     eleventyconfig.addFilter("date", function (date, format) {
         if (format === 'U') {
             return Math.floor(date.getTime() / 1000);

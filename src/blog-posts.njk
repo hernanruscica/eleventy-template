@@ -1,0 +1,15 @@
+---
+permalink: "/blog-posts.json"
+---
+[{% for post in collections.blog | reverse %}
+  {
+    "title": {{ post.data.title | json }},
+    "url": "{{ post.url }}",
+    "category": {{ post.data.category | json }},
+    "tags": {{ post.data.tags | json }},
+    "date": {{ post.data.date | date('U') }},
+    "author": {{ post.data.author | json }},
+    "excerpt": {{ post.data.excerpt | json }},
+    "image": {{ ("/assets/images/" + post.data.heroImage) | json }}
+  }{{ "," if not loop.last }}
+{% endfor %}]

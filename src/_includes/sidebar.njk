@@ -1,0 +1,52 @@
+<!-- Sidebar Start -->
+<div class="col-lg-4">
+    {% if showSearch %}
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        {% include "components/sidebarSearch.njk" %}
+    </div>
+    {% endif %}
+
+    {% if categories and categories.length %}
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        {% set sectionTitle = categoriesTitle or "Categorías" %}
+        {% include "components/sectionTitle.njk" %}
+        {% include "components/sidebarCategories.njk" %}
+    </div>
+    {% endif %}
+
+    {% if recentPosts and recentPosts.length %}
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        {% set sectionTitle = recentPostsTitle or "Posts Recientes" %}
+        {% include "components/sectionTitle.njk" %}
+        {% set posts = recentPosts %}
+        {% include "components/sidebarRecentPosts.njk" %}
+    </div>
+    {% endif %}
+
+    {% if sidebarImage %}
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        {% set image = sidebarImage %}
+        {% include "components/sidebarImage.njk" %}
+    </div>
+    {% endif %}
+
+    {% if tags and tags.length %}
+    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+        {% set sectionTitle = tagsTitle or "Tag Cloud" %}
+        {% include "components/sectionTitle.njk" %}
+        {% include "components/sidebarTags.njk" %}
+    </div>
+    {% endif %}
+
+    {% if plainText %}
+    <div class="wow slideInUp" data-wow-delay="0.1s">
+        {% set sectionTitle = plainTextTitle or "Texto" %}
+        {% include "components/sectionTitle.njk" %}
+        {% set text = plainText %}
+        {% set ctaUrl = plainTextCtaUrl %}
+        {% set ctaText = plainTextCtaText %}
+        {% include "components/sidebarPlainText.njk" %}
+    </div>
+    {% endif %}
+</div>
+<!-- Sidebar End -->

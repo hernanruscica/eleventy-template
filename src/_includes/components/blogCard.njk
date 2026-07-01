@@ -1,0 +1,15 @@
+<div class="blog-item bg-light rounded overflow-hidden" data-tags="{{ cardTags or '' }}">
+    <div class="blog-img position-relative overflow-hidden">
+        <img class="img-fluid" src="{{ cardImage }}" alt="{{ cardAlt or cardTitle }}">
+        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="{{ cardCategoryUrl or '#' }}">{{ cardCategory }}</a>
+    </div>
+    <div class="p-4">
+        <div class="d-flex mb-3">
+            <small class="me-3"><i class="far fa-user text-primary me-2"></i>{{ cardAuthor }}</small>
+            <small><i class="far fa-calendar-alt text-primary me-2"></i>{{ cardDate }}</small>
+        </div>
+        <h4 class="mb-3">{{ cardTitle }}</h4>
+        <p>{{ cardExcerpt }}</p>
+        <a class="text-uppercase" href="{{ cardUrl }}">Leer más <i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>

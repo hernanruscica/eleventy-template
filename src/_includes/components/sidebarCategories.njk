@@ -1,0 +1,5 @@
+<div class="link-animated d-flex flex-column justify-content-start" id="blog-categories">
+    {% for cat in categories %}
+    <a class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="{{ cat.url or '#' }}" data-category="{{ cat.name | lower | replace(' ', '-') }}"><i class="bi bi-arrow-right me-2"></i>{{ cat.name }}</a>
+    {% endfor %}
+</div>

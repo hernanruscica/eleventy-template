@@ -3,5 +3,65 @@ title: Blog
 layout: "base.njk"
 heroImage: "carousel-1.jpg"
 ---
+
+{% set subtitle = "Artículos sobre desarrollo web, marketing digital y tecnología para potenciar tu presencia online" %}
 {% include "heroImage.njk" %}
-{% include "blogPreview.njk" %}
+
+<!-- Blog Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Blog list Start -->
+            <div class="col-lg-8">
+                <div class="row g-5" id="blog-posts-grid">
+
+                    {% for post in posts.all %}
+                    <div class="col-md-6 wow slideInUp" data-wow-delay="{{ '0.1s' if loop.index % 2 != 0 else '0.6s' }}">
+                        {% set cardImage = site.baseUrl ~ post.image %}
+                        {% set cardCategory = post.category %}
+                        {% set cardAuthor = post.author %}
+                        {% set cardDate = post.date %}
+                        {% set cardTitle = post.title %}
+                        {% set cardExcerpt = post.excerpt %}
+                        {% set cardUrl = post.url %}
+                        {% set cardTags = post.tags | join(' ') %}
+                        {% include "components/blogCard.njk" %}
+                    </div>
+                    {% endfor %}
+
+                    <div class="col-12 wow slideInUp" data-wow-delay="0.1s">
+                        <div id="blog-no-results" class="d-none">
+                            <h4>No se encontraron artículos</h4>
+                            <p class="text-muted">Intentá con otros términos de búsqueda o categorías.</p>
+                            <a href="/blog/" class="btn btn-primary py-2 px-4">Ver todos los artículos</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 wow slideInUp" data-wow-delay="0.1s">
+                        {% set currentPage = 1 %}
+                        {% set totalPages = 3 %}
+                        {% set paginationUrl = "/blog" %}
+                        {% set prevUrl = "#" %}
+                        {% set nextUrl = "/blog/2" %}
+                        {% include "components/pagination.njk" %}
+                    </div>
+                </div>
+            </div>
+            <!-- Blog list End -->
+
+            {% set showSearch = true %}
+            {% set categories = posts.categories %}
+            {% set recentPostsTitle = "Posts Recientes" %}
+            {% set recentPosts = posts.all %}
+            {% set sidebarImage = site.baseUrl ~ posts.sidebar.image %}
+            {% set tagsTitle = "Nube de Tags" %}
+            {% set tags = posts.tags %}
+            {% set plainTextTitle = posts.sidebar.plainTextTitle %}
+            {% set plainText = posts.sidebar.plainText %}
+            {% set plainTextCtaUrl = posts.sidebar.plainTextCtaUrl %}
+            {% set plainTextCtaText = posts.sidebar.plainTextCtaText %}
+            {% include "sidebar.njk" %}
+        </div>
+    </div>
+</div>
+<!-- Blog End -->

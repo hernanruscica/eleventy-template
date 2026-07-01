@@ -1,0 +1,5 @@
+<div class="d-flex flex-wrap m-n1">
+    {% for tag in tags %}
+    <a href="/blog/?q={{ tag.name | lower }}" class="btn btn-light m-1">{{ tag.name }}</a>
+    {% endfor %}
+</div>
